@@ -1,8 +1,8 @@
 {
-  "name": "copykitt-infra",
+  "name": "brandify-infra",
   "version": "0.1.0",
   "bin": {
-    "copykitt-infra": "bin/copykitt-infra.js"
+    "brandify-infra": "bin/brandify-infra.js"
   },
   "scripts": {
     "build": "tsc",
@@ -20,7 +20,7 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "aws-cdk-lib": "2.3.0",
+    "aws-cdk-lib": "2.93.0",
     "constructs": "^10.0.0",
     "dotenv": "^10.0.0",
     "source-map-support": "^0.5.16"

@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/copykitt-infra.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/brandify-infra.ts",
   "watch": {
     "include": [
       "**"

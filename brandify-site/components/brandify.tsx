@@ -1,8 +1,10 @@
 import React from "react";
 import Form from "./form";
 import Results from "./results";
+import Image from "next/image";
+import logo from "../public/brandifyLogo.svg";
 
-const brandify: React.FC = () => {
+const Brandify: React.FC = () => {
   const CHARACTER_LIMIT: number = 32;
   const ENDPOINT: string =
     "https://fdgb1jgo7k.execute-api.us-east-1.amazonaws.com/prod/generate_snippet_and_keywords";
@@ -66,7 +68,7 @@ const brandify: React.FC = () => {
           <div className="text-center my-6">
             <Image src={logo} width={42} height={42} />
             <h1 className={gradientTextStyle + " text-3xl font-light"}>
-              brandify
+              Brandify
             </h1>
             <div className={gradientTextStyle}>Your AI branding assistant</div>
           </div>
@@ -78,4 +80,4 @@ const brandify: React.FC = () => {
   );
 };
 
-export default brandify;
+export default Brandify;
