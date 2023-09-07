@@ -37,10 +37,10 @@ def generate_keywords(prompt: str) -> List[str]:
         engine="davinci-instruct-beta-v3", prompt=enriched_prompt, max_tokens=32
     )
 
-    # Extract output text.
+    # Extract output text
     keywords_text: str = response["choices"][0]["text"]
 
-    # Strip whitespace.
+    # Strip whitespace
     keywords_text = keywords_text.strip()
     keywords_array = re.split(",|\n|;|-", keywords_text)
     keywords_array = [k.lower().strip() for k in keywords_array]
@@ -51,7 +51,7 @@ def generate_keywords(prompt: str) -> List[str]:
 
 
 def generate_branding_snippet(prompt: str) -> str:
-    # Load your API key from an environment variable or secret management service
+    # Load API key
     openai.api_key = os.getenv("OPENAI_API_KEY")
     enriched_prompt = f"Generate upbeat branding snippet for {prompt}: "
     print(enriched_prompt)
@@ -60,13 +60,13 @@ def generate_branding_snippet(prompt: str) -> str:
         engine="davinci-instruct-beta-v3", prompt=enriched_prompt, max_tokens=32
     )
 
-    # Extract output text.
+    # Extract output text
     branding_text: str = response["choices"][0]["text"]
 
-    # Strip whitespace.
+    # Strip whitespace
     branding_text = branding_text.strip()
 
-    # Add ... to truncated statements.
+    # Add ... to truncated statements
     last_char = branding_text[-1]
     if last_char not in {".", "!", "?"}:
         branding_text += "..."
